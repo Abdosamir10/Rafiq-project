@@ -1,0 +1,81 @@
+.navbar  a {
+  
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar  a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background: #a93a02;
+  transition: width 0.3s ease-in-out;
+  color: rgb(241, 0, 0);
+}
+
+.navbar  a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+
+
+#rafiq-logo {
+  width: 100px;
+  animation: logoBounce 2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes logoBounce {
+  0% {
+    transform: scale(0.95) rotate(-3deg);
+  }
+  50% {
+    transform: scale(1.05) rotate(3deg);
+  }
+  100% {
+    transform: scale(0.95) rotate(-3deg);
+  }
+}
+
+
+
+.browse-btn {
+  background-color: #5e1f00;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.browse-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Keyframes for pulsing effect */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(94, 31, 0, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(94, 31, 0, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(94, 31, 0, 0);
+  }
+}
+
+
+
+
